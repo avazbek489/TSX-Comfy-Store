@@ -1,4 +1,4 @@
-import React, { FC, useEffect, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 
@@ -81,7 +81,7 @@ const ProductsDetails: FC = () => {
               value={amount}
               onChange={(e) => setAmount(Number(e.target.value))}
             >
-              {Array.from({ length: 20 }, (v, i) => i + 1).map((key) => (
+              {Array.from({ length: 20 }, (_, i) => i + 1).map((key) => (
                 <option key={key} value={key}>
                   {key}
                 </option>
